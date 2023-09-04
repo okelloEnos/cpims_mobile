@@ -842,7 +842,7 @@ String benchMarkThreeScoreFromDb({required CPARADatabase cparaDatabase}){
   //   }
   // });
   List<String> answers = [];
-  for(CPARADatabaseQuestions question in cparaDatabase.questions){
+  for(CPARAChildQuestions question in cparaDatabase.childQuestions){
     if(question.question_code == CparaQuestionIds.healthGoal3ChildQuestion1){
       childQuestion1Answer = question.answer_id;
       answers.add(childQuestion1Answer);

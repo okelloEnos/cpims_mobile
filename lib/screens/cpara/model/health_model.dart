@@ -1,24 +1,24 @@
 import 'package:cpims_mobile/screens/cpara/model/cpara_question_ids.dart';
 
 class HealthModel {
-  final String? question1;
-  final String? question2;
-  final String? question3;
-  final String? question4;
-  final String? question5;
-  final String? question6;
-  final String? question7;
-  final String? question8;
-  final String? question9;
-  final String? question10;
-  final String? question11;
-  final String? question12;
-  final String? question13;
-  final String? question14;
-  final String? question15;
-  final String? question16;
-  final String? question17;
-  final String? question18;
+  final String? question1; // 1.1
+  final String? question2; // 1.2
+  final String? question3; // 1.3
+  final String? question4; // 1.4
+  final String? question5; // 1.5
+  final String? question6; // 2.1
+  final String? question7; // 2.2
+  final String? question8; // 2.3
+  final String? question9; // 2.4
+  final String? question10; // 2.5
+  final String? question11; // 2.6
+  final String? question12;  // 2.7
+  final String? question13; // 2.8
+  final String? question14; // 2.9
+  final String? question15; // 4.1
+  final String? question16; // 4.2
+  final String? question17; // 4.3
+  final String? question18; // 4.4
   final List<HealthChild>? childrenQuestions;
 
   HealthModel({
@@ -140,9 +140,9 @@ class HealthModel {
 class HealthChild {
   String id;
   String name;
-  String question1;
-  String question2;
-  String question3;
+  String question1; // 3.1
+  String question2; // 3.2
+  String question3; // 3.3
 
   HealthChild({
     required this.name,

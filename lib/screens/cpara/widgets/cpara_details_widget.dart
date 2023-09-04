@@ -260,7 +260,7 @@ class _DateTextFieldState extends State<DateTextField> {
             context: context,
             initialDate: DateTime.now(),
             firstDate: DateTime(2000),
-            lastDate: DateTime(2101),
+            lastDate: DateTime.now(),
           ).then((pickedDate) {
             if (pickedDate != null && mounted) {
               setState(() {

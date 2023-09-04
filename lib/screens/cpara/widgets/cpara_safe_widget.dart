@@ -236,7 +236,7 @@ class _CparaSafeWidgetState extends State<CparaSafeWidget> {
         childrenQuestionsOptions.add(safeModel.childrenQuestions![i] == null
             ? null
             : convertingStringToRadioButtonOptions(
-                safeModel.childrenQuestions![i].question1!));
+                safeModel.childrenQuestions![i].question1 ?? ""));
       }
     } else {
       childrenQuestionsOptions = [

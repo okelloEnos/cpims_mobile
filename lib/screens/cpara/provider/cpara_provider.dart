@@ -85,7 +85,7 @@ class CparaProvider extends ChangeNotifier {
     if (healthModel?.question6 == "Yes" && (healthModel?.question7 == "Yes" ||
         healthModel?.question7 == "N/A") &&
             healthModel?.question8 == "Yes" &&
-            healthModel?.question9 == "N/A" &&
+            healthModel?.question9 == "Yes" &&
         (healthModel?.question10 == "Yes" ||
         healthModel?.question10 == "N/A") &&
             healthModel?.question11 == "Yes" &&
@@ -135,9 +135,9 @@ class CparaProvider extends ChangeNotifier {
 // Calculate stable benchmark
   int stableBenchMark() {
     int stableBenchmark = 0;
-    if (stableModel?.question1 == "Yes" ||
-        stableModel?.question1 == "N/A" && stableModel?.question2 == "Yes" ||
-        stableModel?.question2 == "N/A" && stableModel?.question3 == "Yes") {
+    if ((stableModel?.question1 == "Yes" ||
+        stableModel?.question1 == "N/A") && (stableModel?.question2 == "Yes" ||
+        stableModel?.question2 == "N/A") && stableModel?.question3 == "Yes") {
       stableBenchmark = 1;
     } else {
       stableBenchmark = 0;
@@ -166,14 +166,14 @@ class CparaProvider extends ChangeNotifier {
         safeModel?.question2 == "Yes" &&
         // safeModel?.question3 == "Yes" &&
         safeModel?.question4 == "Yes" &&
-        safeModel?.question5 == "Yes" && overallChildrenBenchmark(childrenOptions: childQuestions).toLowerCase() == "yes") {
+        safeModel?.question3 == "Yes" && overallChildrenBenchmark(childrenOptions: childQuestions).toLowerCase() == "yes") {
       benchmark1 = 1;
     } else {
       benchmark1 = 0;
     }
 
 // Safe Benchmark 2 result
-    if (safeModel?.question6 == "Yes" && safeModel?.question7 == "Yes") {
+    if (safeModel?.question6 == "Yes" && safeModel?.question5 == "Yes") {
       benchmark2 = 1;
     } else {
       benchmark2 = 0;
